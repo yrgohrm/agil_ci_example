@@ -1,0 +1,35 @@
+{
+  "name": "ci_example",
+  "version": "1.0.0",
+  "description": "Simple example to use with CI/CD-pipeline",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "mocha",
+    "doc": "jsdoc -r src"
+  },
+  "author": "Hampus Ram <hampus.ram@educ.goteborg.se>",
+  "license": "MIT",
+  "devDependencies": {
+    "jsdoc": "^3.6.6",
+    "mocha": "^8.3.0",
+    "snowpack": "^3.0.11"
+  },
+  "snowpack": {
+    "devOptions": {
+      "bundle": false
+    },
+    "mount": {
+      "public": "/",
+      "src": "/js"
+    },
+    "optimize": {
+      "bundle": true,
+      "manifest": false,
+      "minify": true,
+      "target": "es2018"
+    }
+  }
+}
