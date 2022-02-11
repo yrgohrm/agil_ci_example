@@ -13,10 +13,10 @@
   "author": "Hampus Ram <hampus.ram@educ.goteborg.se>",
   "license": "MIT",
   "devDependencies": {
-    "jsdoc": "^3.6.6",
-    "mocha": "^8.3.0",
-    "netlify-cli": "^3.8.1",
-    "snowpack": "^3.0.11"
+    "jsdoc": "^3.6.10",
+    "mocha": "^8.4.0",
+    "netlify-cli": "^3.39.4",
+    "snowpack": "^3.8.8"
   },
   "snowpack": {
     "devOptions": {
