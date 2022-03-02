@@ -19,3 +19,18 @@ workflows:
           version: '16.10'
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: npm
+
+      - build-and-deploy:
+          executor: node/default
+          steps:
+          - checkout
+          - node/install-packages
+          - run:
+          name: Build
+          command: npm run build
+          - run:
+          name: Deploy Netlify
+          command: npx netlify deploy --prod --dir=build
+          
+          
+          
