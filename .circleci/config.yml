@@ -20,17 +20,16 @@ workflows:
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: npm
 
-      - build-and-deploy:
-          executor: node/default
-          steps:
-          - checkout
-          - node/install-packages
-          - run:
+jobs:
+  build-and-deploy:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
           name: Build
           command: npm run build
-          - run:
+      - run:
           name: Deploy Netlify
           command: npx netlify deploy --prod --dir=build
-          
-          
-          
+
