@@ -34,3 +34,5 @@ class CoolApp extends HTMLElement {
 }
 
 window.customElements.define("cool-app", CoolApp)
+
+// COOL CHANGES!!
